@@ -13,7 +13,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { EditorFormProps } from "@/lib/types";
 import { WorkExperienceValues, workExperienceSchema } from "@/lib/validation";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { GripHorizontal, GripHorizontalIcon } from "lucide-react";
 
 import { useEffect } from "react";
 import { UseFormReturn, useFieldArray, useForm } from "react-hook-form";
@@ -37,6 +36,7 @@ import { restrictToVerticalAxis } from "@dnd-kit/modifiers";
 import { CSS } from "@dnd-kit/utilities";
 import { cn } from "@/lib/utils";
 import GenerateWorkExperienceButton from "./GenerateWorkExperienceButton";
+import { GripHorizontal } from "lucide-react";
 
 export default function WorkExperienceForm({
   resumeData,

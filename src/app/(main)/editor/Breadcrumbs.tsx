@@ -10,7 +10,7 @@ import { steps } from "./steps";
 import React from "react";
 
 interface BreadcrumbsProps {
-  currentStep: String;
+  currentStep: string;
   setCurrentStep: (step: string) => void;
 }
 
