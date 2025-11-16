@@ -22,7 +22,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    // @ts-expect-error ClerkProvider returns a Promise but works fine at runtime
     <ClerkProvider>
       <html lang="en" suppressHydrationWarning>
         <body className={inter.className}>
