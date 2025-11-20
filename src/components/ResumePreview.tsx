@@ -6,9 +6,11 @@ import { formatDate } from "date-fns";
 import { useEffect, useRef, useState } from "react";
 import { Badge } from "./ui/badge";
 import { BorderStyles } from "@/app/(main)/editor/BorderStyleButton";
+import { Github } from "lucide-react";
 
 interface ResumePreviewProps {
   resumeData: ResumeValues;
+
   contentRef?: React.Ref<HTMLDivElement>;
   className?: string;
 }
@@ -16,6 +18,7 @@ interface ResumePreviewProps {
 export default function ResumePreview({
   resumeData,
   contentRef,
+
   className,
 }: ResumePreviewProps) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -39,8 +42,10 @@ export default function ResumePreview({
         id="resumePreviewContent"
       >
         <PersonalInfoHeader resumeData={resumeData} />
+
         <SummarySection resumeData={resumeData} />
         <WorkExperienceSection resumeData={resumeData} />
+        <ProjectsSection resumeData={resumeData} />
         <EducationSection resumeData={resumeData} />
         <SkillsSection resumeData={resumeData} />
       </div>
@@ -296,6 +301,47 @@ function SkillsSection({ resumeData }: ResumeSectionProps) {
             </Badge>
           ))}
         </div>
+      </div>
+    </>
+  );
+}
+
+function ProjectsSection({ resumeData }: ResumeSectionProps) {
+  const { projects, colorHex } = resumeData;
+
+  if (!projects?.length) return null;
+
+  return (
+    <>
+      <hr className="border-2" style={{ borderColor: colorHex }} />
+      <div className="space-y-3">
+        <p className="text-lg font-semibold" style={{ color: colorHex }}>
+          Projects
+        </p>
+        {projects.map((project, index) => (
+          <div key={index} className="break-inside-avoid space-y-1">
+            <div className="flex items-center gap-2">
+              <p className="text-sm font-semibold">{project.name}</p>
+              {project.link && (
+                <span
+                  onClick={() => window.open(project.link, "_blank")}
+                  className="cursor-pointer"
+                >
+                  <Github
+                    size={16}
+                    className="text-gray-700 hover:text-black"
+                  />
+                </span>
+              )}
+            </div>
+            <p className="text-xs italic text-gray-600">
+              Tech Stack: {project.techStack}
+            </p>
+            <div className="whitespace-pre-line text-xs">
+              {project.description}
+            </div>
+          </div>
+        ))}
       </div>
     </>
   );

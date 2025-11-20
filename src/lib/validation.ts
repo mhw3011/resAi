@@ -67,6 +67,25 @@ export const educationSchema = z.object({
 
 export type EducationValues = z.infer<typeof educationSchema>;
 
+export const projectsSchema = z.object({
+  projects: z
+    .array(
+      z.object({
+        name: optionalString,
+        link: optionalString,
+        techStack: optionalString,
+        description: optionalString,
+      }),
+    )
+    .optional(),
+});
+
+export type ProjectValues = z.infer<typeof projectsSchema>;
+
+export type Project = NonNullable<
+  z.infer<typeof projectsSchema>["projects"]
+>[number];
+
 export const skillsSchema = z.object({
   skills: z.array(z.string().trim()).optional(),
 });
@@ -83,16 +102,19 @@ export const resumeSchema = z.object({
   ...generalInfoSchema.shape,
   ...personalInfoSchema.shape,
   ...workExperienceSchema.shape,
+  ...projectsSchema.shape,
   ...educationSchema.shape,
   ...skillsSchema.shape,
   ...summarySchema.shape,
   colorHex: optionalString,
   borderStyle: optionalString,
+  template: optionalString,
 });
 
 export type ResumeValues = Omit<z.infer<typeof resumeSchema>, "photo"> & {
   id?: string;
   photo?: File | string | null;
+  template?: string;
 };
 
 export const generateWorkExperienceSchema = z.object({

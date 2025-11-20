@@ -20,7 +20,12 @@ export default function ResumeEditor({ resumeToEdit }: ResumeEditorProps) {
   const searchParams = useSearchParams();
 
   const [resumeData, setResumeData] = useState<ResumeValues>(
-    resumeToEdit ? mapToResumeValues(resumeToEdit) : {},
+    resumeToEdit
+      ? {
+          ...mapToResumeValues(resumeToEdit),
+          template: mapToResumeValues(resumeToEdit).template || "default",
+        }
+      : { template: "default" },
   );
 
   const [showSmResumePreview, setShowSmResumePreview] = useState(false);

@@ -49,5 +49,15 @@ export function mapToResumeValues(data: ResumeServerData): ResumeValues {
     borderStyle: data.borderStyle,
     colorHex: data.colorHex,
     summary: data.summary || undefined,
+
+    projects:
+      data.projects?.map((p) => ({
+        name: p.name || undefined,
+        link: p.link || undefined,
+        techStack: p.techStack || undefined,
+        description: p.description || undefined,
+      })) || [],
+
+    template: data.template || "default",
   };
 }

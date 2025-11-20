@@ -11,8 +11,8 @@ export default function Home() {
         <Image
           src={logo}
           alt="Logo"
-          width={150}
-          height={150}
+          width={200}
+          height={200}
           className="mx-auto md:ms-0"
         />
         <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">

@@ -13,8 +13,14 @@ export async function saveResume(values: ResumeValues) {
 
   console.log("received values", values);
 
-  const { photo, workExperiences, educations, ...resumeValues } =
-    resumeSchema.parse(values);
+  const {
+    photo,
+    workExperiences,
+    projects,
+    educations,
+    template,
+    ...resumeValues
+  } = resumeSchema.parse(values);
 
   const { userId } = await auth();
 
@@ -76,6 +82,7 @@ export async function saveResume(values: ResumeValues) {
       where: { id },
       data: {
         ...resumeValues,
+        template,
         photoUrl: newPhotoUrl,
         workExperiences: {
           deleteMany: {},
@@ -93,6 +100,18 @@ export async function saveResume(values: ResumeValues) {
             endDate: edu.endDate ? new Date(edu.endDate) : undefined,
           })),
         },
+        projects: projects?.length
+          ? {
+              deleteMany: {},
+              create: projects.map((p) => ({
+                name: p.name,
+                link: p.link,
+                techStack: p.techStack,
+                description: p.description,
+              })),
+            }
+          : undefined,
+
         updatedAt: new Date(),
       },
     });
@@ -100,6 +119,7 @@ export async function saveResume(values: ResumeValues) {
     return prisma.resume.create({
       data: {
         ...resumeValues,
+        template,
         userId,
         photoUrl: newPhotoUrl,
         workExperiences: {
@@ -116,6 +136,16 @@ export async function saveResume(values: ResumeValues) {
             endDate: edu.endDate ? new Date(edu.endDate) : undefined,
           })),
         },
+        projects: projects?.length
+          ? {
+              create: projects.map((p) => ({
+                name: p.name,
+                link: p.link,
+                techStack: p.techStack,
+                description: p.description,
+              })),
+            }
+          : undefined,
       },
     });
   }
