@@ -31,7 +31,7 @@ export default function JakeResumePreview({
         className,
       )}
       style={{
-        fontFamily: "Georgia, 'Times New Roman', serif",
+        fontFamily: "Times New Roman",
       }}
     >
       <div

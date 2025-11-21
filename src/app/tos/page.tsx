@@ -12,18 +12,18 @@ export default function Page() {
         Effective Date: Oct 31, 2024
       </p>
       <p>
-        Welcome to AI Resume Builder. These Terms of Service (&quot;Terms&quot;)
-        govern your use of our website and services, including any paid
-        subscription plans. By accessing or using AI Resume Builder (&quot;the
-        Service&quot;), you agree to be bound by these Terms. If you do not
-        agree to these Terms, do not use the Service.
+        Welcome to ResAI. These Terms of Service (&quot;Terms&quot;) govern your
+        use of our website and services, including any paid subscription plans.
+        By accessing or using ResAI (&quot;the Service&quot;), you agree to be
+        bound by these Terms. If you do not agree to these Terms, do not use the
+        Service.
       </p>
       <h2 className="text-xl font-semibold">1. Overview</h2>
       <p>
-        AI Resume Builder is a SaaS platform that provides resume-building tools
-        powered by artificial intelligence. We offer both a free tier and paid
-        subscription plans (&quot;Paid Plans&quot;). Payments for Paid Plans are
-        processed through Stripe, our third-party payment provider.
+        ResAI is a SaaS platform that provides resume-building tools powered by
+        artificial intelligence. We offer both a free tier and paid subscription
+        plans (&quot;Paid Plans&quot;). Payments for Paid Plans are processed
+        through Stripe, our third-party payment provider.
       </p>
       <h2 className="text-xl font-semibold">2. Eligibility</h2>
       <p>
@@ -67,10 +67,10 @@ export default function Page() {
           the renewal date.
         </li>
         <li>
-          <strong>Refund Policy:</strong> AI Resume Builder does not offer
-          refunds for any payments already processed. However, you can cancel
-          your subscription at any time, and you will continue to have access to
-          the Paid Plan features until the end of your current billing period.
+          <strong>Refund Policy:</strong> ResAI does not offer refunds for any
+          payments already processed. However, you can cancel your subscription
+          at any time, and you will continue to have access to the Paid Plan
+          features until the end of your current billing period.
         </li>
       </ul>
       <h2 className="text-xl font-semibold">6. Cancelation of Subscription</h2>
@@ -92,9 +92,9 @@ export default function Page() {
       </p>
       <h2 className="text-xl font-semibold">8. License to Use the Service</h2>
       <p>
-        AI Resume Builder grants you a limited, non-exclusive, non-transferable,
-        and revocable license to use the Service for personal or professional
-        use in accordance with these Terms. You may not:
+        ResAI grants you a limited, non-exclusive, non-transferable, and
+        revocable license to use the Service for personal or professional use in
+        accordance with these Terms. You may not:
       </p>
       <ul className="list-inside list-disc">
         <li>Copy, modify, or distribute any part of the Service;</li>
@@ -107,15 +107,15 @@ export default function Page() {
       <h2 className="text-xl font-semibold">9. Intellectual Property</h2>
       <p>
         All content, trademarks, logos, and intellectual property related to AI
-        Resume Builder are owned by AI Resume Builder or its licensors. You
-        agree not to infringe on these rights.
+        Resume Builder are owned by ResAI or its licensors. You agree not to
+        infringe on these rights.
       </p>
       <h2 className="text-xl font-semibold">10. User Content</h2>
       <p>
-        By using the Service, you grant AI Resume Builder a non-exclusive,
-        worldwide, royalty-free license to use, modify, and display any content
-        you create using the platform (such as resumes) solely for the purpose
-        of providing the Service. You retain all ownership of your content.
+        By using the Service, you grant ResAI a non-exclusive, worldwide,
+        royalty-free license to use, modify, and display any content you create
+        using the platform (such as resumes) solely for the purpose of providing
+        the Service. You retain all ownership of your content.
       </p>
       <h2 className="text-xl font-semibold">11. Privacy Policy</h2>
       <p>
@@ -126,31 +126,30 @@ export default function Page() {
       <h2 className="text-xl font-semibold">12. Third-Party Services</h2>
       <p>
         The Service may contain links or integrations to third-party websites or
-        services (e.g., Stripe for payments). AI Resume Builder is not
-        responsible for the content or practices of any third-party websites or
-        services.
+        services (e.g., Stripe for payments). ResAI is not responsible for the
+        content or practices of any third-party websites or services.
       </p>
       <h2 className="text-xl font-semibold">13. Disclaimer of Warranties</h2>
       <p>
         The Service is provided on an &quot;as is&quot; and &quot;as
-        available&quot; basis. AI Resume Builder makes no warranties, express or
-        implied, regarding the Service, including but not limited to the
-        accuracy of resume outputs, the suitability of resumes for job
-        applications, or the uninterrupted availability of the Service.
+        available&quot; basis. ResAI makes no warranties, express or implied,
+        regarding the Service, including but not limited to the accuracy of
+        resume outputs, the suitability of resumes for job applications, or the
+        uninterrupted availability of the Service.
       </p>
       <h2 className="text-xl font-semibold">14. Limitation of Liability</h2>
       <p>
-        To the fullest extent permitted by law, AI Resume Builder shall not be
-        liable for any indirect, incidental, consequential, or punitive damages,
-        including loss of profits, data, or business opportunities, arising out
-        of or related to your use of the Service.
+        To the fullest extent permitted by law, ResAI shall not be liable for
+        any indirect, incidental, consequential, or punitive damages, including
+        loss of profits, data, or business opportunities, arising out of or
+        related to your use of the Service.
       </p>
       <h2 className="text-xl font-semibold">15. Governing Law</h2>
       <p>
         These Terms are governed by and construed in accordance with the laws of
-        [Insert Jurisdiction], without regard to its conflict of law provisions.
+        the Republic of India, without regard to its conflict of law provisions.
         Any disputes arising from these Terms will be subject to the exclusive
-        jurisdiction of the courts located in [Insert Location].
+        jurisdiction of the courts located in Mumbai, Maharashtra, India.
       </p>
       <h2 className="text-xl font-semibold">16. Changes to the Terms</h2>
       <p>
@@ -162,11 +161,11 @@ export default function Page() {
       <h2 className="text-xl font-semibold">17. Contact Us</h2>
       <p>
         If you have any questions about these Terms, please contact us at
-        [Insert Contact Information].
+        munauvar.warsi03@gmail.com .
       </p>
       <p>
-        By using AI Resume Builder, you acknowledge that you have read,
-        understood, and agree to these Terms of Service.
+        By using ResAI, you acknowledge that you have read, understood, and
+        agree to these Terms of Service.
       </p>
     </main>
   );

@@ -40,6 +40,7 @@
     "react-hook-form": "^7.53.1",
     "react-to-print": "^3.0.2",
     "react-type-animation": "^3.2.0",
+    "react-typed": "^2.0.12",
     "stripe": "^17.3.1",
     "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7",

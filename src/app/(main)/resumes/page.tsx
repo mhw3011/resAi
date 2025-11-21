@@ -36,15 +36,13 @@ export default async function Page() {
     getUserSubscriptionLevel(userId),
   ]);
 
-  //Check quota for non-premium users
-
   return (
     <main className="mx-auto w-full max-w-7xl space-y-6 px-3 py-6">
       <CreateResumeButton
         canCreate={canCreateResume(subscriptionLevel, totalCount)}
       />
       <div className="space-y-1">
-        <h1 className="bg-gradient-to-r from-green-600 to-green-400 bg-clip-text text-3xl font-bold text-transparent">
+        <h1 className="bg-gradient-to-r from-orange-600 to-orange-100 bg-clip-text text-3xl font-bold text-transparent">
           Your Resumes
         </h1>
         <p>Total : {totalCount}</p>

@@ -56,7 +56,7 @@ export default function PremiumModal() {
               <ul className="list-inside space-y-2">
                 {premiumFeatures.map((feature) => (
                   <li key={feature} className="flex items-center gap-2">
-                    <Check className="size-4 text-green-500" />
+                    <Check className="size-4 text-orange-500" />
                     {feature}
                   </li>
                 ))}
@@ -72,13 +72,13 @@ export default function PremiumModal() {
             </div>
             <div className="mx-6 border-l" />
             <div className="flex w-1/2 flex-col space-y-5">
-              <h3 className="bg-gradient-to-r from-green-600 to-green-400 bg-clip-text text-center text-lg font-bold text-transparent">
+              <h3 className="bg-gradient-to-r from-orange-600 to-orange-300 bg-clip-text text-center text-lg font-bold text-transparent">
                 Premium Plus
               </h3>
               <ul className="list-inside space-y-2">
                 {premiumPlusFeatures.map((feature) => (
                   <li key={feature} className="flex items-center gap-2">
-                    <Check className="size-4 text-green-500" />
+                    <Check className="size-4 text-orange-500" />
                     {feature}
                   </li>
                 ))}
